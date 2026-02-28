@@ -22,6 +22,8 @@ public partial class ApplicationDbContext : DbContext
         modelBuilder.Entity<Book>().ToTable("Books");
         modelBuilder.Entity<Loan>().ToTable("Loans");
         modelBuilder.Entity<Member>().ToTable("Members");
+        modelBuilder.Entity<Author>().ToTable("Author");
+        modelBuilder.Entity<BookAuthor>().ToTable("BookAuthor");
 
         modelBuilder.Entity<Loan>()
             .HasOne(m => m.Member)
@@ -33,6 +35,18 @@ public partial class ApplicationDbContext : DbContext
             .HasOne(b => b.Book)
             .WithMany(l => l.Loans)
             .HasForeignKey(b => b.BookId)
+            .OnDelete(DeleteBehavior.Restrict);
+        
+        modelBuilder.Entity<BookAuthor>()
+            .HasOne(b => b.Book)
+            .WithMany(ba => ba.BookAuthors)
+            .HasForeignKey(b => b.BookId)
+            .OnDelete(DeleteBehavior.Restrict);
+        
+        modelBuilder.Entity<BookAuthor>()
+            .HasOne(a => a.Author)
+            .WithMany(ba => ba.BookAuthors)
+            .HasForeignKey(ai => ai.AuthorId)
             .OnDelete(DeleteBehavior.Restrict);
     }
 

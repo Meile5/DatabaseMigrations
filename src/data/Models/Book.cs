@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace src.Models;
 
@@ -13,4 +14,12 @@ public class Book
     [Required]
     public DateTime PublishDate { get; set; }
     public virtual ICollection<Loan> Loans { get; set; }
+    public virtual ICollection<BookAuthor> BookAuthors { get; set; }
+    
+    //
+    // [ForeignKey(nameof(MemberId))]
+    // public virtual Member Member { get; set; }
+    //
+    // [ForeignKey(nameof(BookId))]
+    // public virtual Book Book { get; set; }
 }
