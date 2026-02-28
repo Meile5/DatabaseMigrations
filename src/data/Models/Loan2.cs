@@ -14,7 +14,9 @@ public class Loan2
     [Required]
     public DateTime loanDate { get; set; }
     public DateTime? returnDate { get; set; }
-    
+
+    public string? Status { get; set; } = "Active";
+
     [ForeignKey(nameof(MemberId))]
     public virtual Member2 Member2 { get; set; }
     
