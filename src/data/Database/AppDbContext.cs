@@ -38,9 +38,15 @@ public partial class ApplicationDbContext : DbContext
             .OnDelete(DeleteBehavior.Restrict);
         
         modelBuilder.Entity<Loan2>()
-            .HasOne(a => a.Author)
-            .WithMany(ba => ba.BookAuthors)
-            .HasForeignKey(ai => ai.AuthorId)
+            .HasOne(b => b.Book)
+            .WithMany(l2 => l2.Loans2)
+            .HasForeignKey(b => b.BookId)
+            .OnDelete(DeleteBehavior.Restrict);
+        
+        modelBuilder.Entity<Loan2>()
+            .HasOne(m2 => m2.Member2)
+            .WithMany(l2 => l2.Loans2)
+            .HasForeignKey(m2 => m2.MemberId)
             .OnDelete(DeleteBehavior.Restrict);
         
         modelBuilder.Entity<BookAuthor>()

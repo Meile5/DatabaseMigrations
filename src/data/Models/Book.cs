@@ -14,6 +14,7 @@ public class Book
     [Required]
     public DateTime PublishDate { get; set; }
     public virtual ICollection<Loan> Loans { get; set; }
+    public virtual ICollection<Loan2> Loans2 { get; set; }
     public virtual ICollection<BookAuthor> BookAuthors { get; set; }
     
     //

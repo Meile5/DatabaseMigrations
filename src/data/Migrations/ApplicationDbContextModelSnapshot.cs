@@ -119,6 +119,33 @@ namespace src.Migrations
                     b.ToTable("Loans", (string)null);
                 });
 
+            modelBuilder.Entity("src.Models.Loan2", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MemberId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("loanDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("returnDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("MemberId");
+
+                    b.ToTable("Loan2");
+                });
+
             modelBuilder.Entity("src.Models.Member", b =>
                 {
                     b.Property<Guid>("Id")
@@ -140,6 +167,36 @@ namespace src.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Members", (string)null);
+                });
+
+            modelBuilder.Entity("src.Models.Member2", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("Member2");
                 });
 
             modelBuilder.Entity("BookAuthor", b =>
@@ -184,6 +241,25 @@ namespace src.Migrations
                     b.Navigation("Member");
                 });
 
+            modelBuilder.Entity("src.Models.Loan2", b =>
+                {
+                    b.HasOne("src.Models.Book", "Book")
+                        .WithMany("Loans2")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("src.Models.Member2", "Member2")
+                        .WithMany("Loans2")
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Member2");
+                });
+
             modelBuilder.Entity("src.Models.Author", b =>
                 {
                     b.Navigation("BookAuthors");
@@ -196,11 +272,18 @@ namespace src.Migrations
                     b.Navigation("BookAuthors");
 
                     b.Navigation("Loans");
+
+                    b.Navigation("Loans2");
                 });
 
             modelBuilder.Entity("src.Models.Member", b =>
                 {
                     b.Navigation("Loans");
+                });
+
+            modelBuilder.Entity("src.Models.Member2", b =>
+                {
+                    b.Navigation("Loans2");
                 });
 #pragma warning restore 612, 618
         }
