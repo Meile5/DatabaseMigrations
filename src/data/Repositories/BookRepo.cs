@@ -1,6 +1,6 @@
 ﻿namespace api.Controllers;
 
-public class BookRepo (AppDbContext dbContext)
+public class BookRepo (ApplicationDbContext dbContext)
 {
     
     public async Task<List<Comment>> GetComments(string articleId)
@@ -25,20 +25,19 @@ public class BookRepo (AppDbContext dbContext)
     {
         try
         {
-			return result = await _db.Books
-                .Join(_db.BookAuthors, b => b.Id, ba => ba.BookId, (b, ba) => new { b, ba })
-                .Join(_db.Authors, x => x.ba.AuthorId, a => a.Id, (x, a) => new BookAuthorDto
+            return result = await _db.Books
+                .Include(b => b.BookAuthors)
+                .ThenInclude(ba => ba.Author)
+                .Select(b => new BookAuthorDto
                 {
-                    BookId = x.b.BookId,
-                    Title = x.b.Title,
-                    AuthorName = a.Name
+                    BookId = b.Id,
+                    Title = b.Title,
+                    Authors = b.BookAuthors.Select(ba => ba.Author.Name).ToList()
                 })
                 .ToListAsync();
             
-			
-            
         }
-		catch (Exception e)
+        catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
