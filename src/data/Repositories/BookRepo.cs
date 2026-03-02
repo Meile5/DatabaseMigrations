@@ -1,49 +1,41 @@
-﻿namespace api.Controllers;
+﻿using DefaultNamespace;
+using Microsoft.EntityFrameworkCore;
+using src.Database;
 
-public class BookRepo (ApplicationDbContext dbContext)
+namespace api.Controllers;
+
+public class BookRepo
 {
-    
-    public async Task<List<Comment>> GetComments(string articleId)
+    private readonly ApplicationDbContext _db;
+
+    public BookRepo(ApplicationDbContext db)
     {
-        try
-        {
-            return await dbContext.Comments
-                .Include(c => c.CommentUsers)
-                .Where(c => c.ArticleId == articleId)
-                .ToListAsync();
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-         
+        _db = db;
     }
 
-
-    public async Task <List<BookAuthorDto>> GetBooks()
+    public async Task<List<BookAuthorDto>> GetBooks()
     {
         try
         {
-            return result = await _db.Books
+            return await _db.Book
                 .Include(b => b.BookAuthors)
                 .ThenInclude(ba => ba.Author)
                 .Select(b => new BookAuthorDto
                 {
                     BookId = b.Id,
                     Title = b.Title,
-                    Authors = b.BookAuthors.Select(ba => ba.Author.Name).ToList()
+                    Authors = b.BookAuthors.Select(ba => new AuthorDto
+                    {
+                        FirstName = ba.Author.FirstName,
+                        LastName = ba.Author.LastName
+                    }).ToList()
                 })
                 .ToListAsync();
-            
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw;
         }
-        
     }
-    
-    
 }

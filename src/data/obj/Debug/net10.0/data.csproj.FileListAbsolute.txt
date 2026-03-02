@@ -314,3 +314,6 @@ C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\obj\Debug\net10.0\refint\data
 C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\obj\Debug\net10.0\data.pdb
 C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\obj\Debug\net10.0\data.genruntimeconfig.cache
 C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\obj\Debug\net10.0\ref\data.dll
+C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
