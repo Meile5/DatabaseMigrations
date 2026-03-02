@@ -8,7 +8,7 @@ public class MemberService(MemberRepo repo)
     
     public async Task <List<MemberDto>> GetMembers()
     {
-        var members = await repo.RegisterMember();
+        var members = await repo.GetMembers();
         var newDtoList = new List<MemberDto>();
         foreach (var member in members)
         {

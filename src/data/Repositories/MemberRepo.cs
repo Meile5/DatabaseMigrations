@@ -6,7 +6,7 @@ namespace api.Controllers;
 
 public class MemberRepo(ApplicationDbContext _db)
 {
-    public async Task <List<Member>> RegisterMember()
+    public async Task <List<Member>> GetMembers()
     {
         try
         {

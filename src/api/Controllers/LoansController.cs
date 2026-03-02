@@ -5,12 +5,13 @@ namespace api.Controllers;
 [ApiController]
 [Route("Book")]
 
-public class LoansCController : ControllerBase
+public class LoansController(LoanService service) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetLoan()
+    public async Task<IActionResult> GetLoans(string memberId)
     {
-        return Ok();
+        var loans = await service.GetLoans(memberId);
+        return Ok(loans);
     }
 
     [HttpPost]
