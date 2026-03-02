@@ -317,3 +317,6 @@ C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\obj\Debug\net10.0\ref\data.dl
 C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Iulia\Desktop\DatabaseMigrations\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\andre\Desktop\databases\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\andre\Desktop\databases\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\andre\Desktop\databases\src\data\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll

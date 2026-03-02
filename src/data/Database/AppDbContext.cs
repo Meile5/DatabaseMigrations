@@ -12,7 +12,11 @@ public partial class ApplicationDbContext : DbContext
 
     public DbSet<Book> Book { get; set; }
     public DbSet<Member> Member { get; set; }
+    public DbSet<Member2> Member2 { get; set; }
+
     public DbSet<Loan> Loan { get; set; }
+    public DbSet<Loan2> Loan2 { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

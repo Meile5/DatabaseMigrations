@@ -14,6 +14,12 @@ builder.Services.AddOpenApi();
 builder.Services.AddHostedService<Worker>();
 builder.Services.AddScoped<BookService>();
 builder.Services.AddScoped<BookRepo>();
+builder.Services.AddScoped<MemberService>();
+builder.Services.AddScoped<MemberService2>();
+builder.Services.AddScoped<MemberRepo>();
+builder.Services.AddScoped<MemberRepo2>();
+
+
 
 var app = builder.Build();
 

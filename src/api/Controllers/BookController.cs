@@ -8,8 +8,8 @@ namespace api.Controllers;
 public class BookController(BookService bookService) : ControllerBase
 {
     [HttpGet]
-    [Route("getBooks")]
-    public async Task<IActionResult> GetBooks()
+    [Route("getBooksAuthors")]
+    public async Task<IActionResult> GetBooksAuthors()
     {
         var dtos = await bookService.GetBooks();
         return Ok(dtos);
