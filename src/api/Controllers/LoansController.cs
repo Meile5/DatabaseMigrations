@@ -3,7 +3,7 @@
 namespace api.Controllers;
 
 [ApiController]
-[Route("Book")]
+[Route("api/loans")]
 
 public class LoansController(LoanService service) : ControllerBase
 {

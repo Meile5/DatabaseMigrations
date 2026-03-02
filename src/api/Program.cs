@@ -20,6 +20,8 @@ builder.Services.AddScoped<MemberRepo>();
 builder.Services.AddScoped<MemberRepo2>();
 builder.Services.AddScoped<LoanRepo>();
 builder.Services.AddScoped<LoanService>();
+builder.Services.AddScoped<LoanRepo2>();
+builder.Services.AddScoped<LoanService2>();
 
 
 
