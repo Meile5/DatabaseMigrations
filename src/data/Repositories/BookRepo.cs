@@ -24,6 +24,7 @@ public class BookRepo
                 {
                     BookId = b.Id,
                     Title = b.Title,
+                    ISBN = b.ISBN,
                     Authors = b.BookAuthors.Select(ba => new AuthorDto
                     {
                         FirstName = ba.Author.FirstName,
@@ -51,6 +52,7 @@ public class BookRepo
                 {
                     BookId = b.Id,
                     Title = b.Title,
+                    ISBN = b.ISBNNew,
                     Authors = b.BookAuthors.Select(ba => new AuthorDto
                     {
                         FirstName = ba.Author.FirstName,
