@@ -8,4 +8,9 @@ public class BookService (BookRepo repo)
     {
         return await repo.GetBooks();
     }
+
+    public async Task<List<BookAuthorDto>> GetAvailableBooks()
+    {
+        return await repo.GetAvailableBooks();
+    }
 }

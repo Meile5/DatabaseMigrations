@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\api\\api.csproj": {}
+    "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\api\\api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\api\\api.csproj": {
+    "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\api\\api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\api\\api.csproj",
+        "projectUniqueName": "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\api\\api.csproj",
         "projectName": "api",
-        "projectPath": "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\api\\api.csproj",
-        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\api\\obj\\",
+        "projectPath": "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\Iulia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iulia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -26,8 +26,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\data\\data.csproj": {
-                "projectPath": "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\data\\data.csproj"
+              "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\data\\data.csproj": {
+                "projectPath": "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\data\\data.csproj"
               }
             }
           }
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\Iulia\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -512,17 +512,17 @@
         }
       }
     },
-    "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\data\\data.csproj": {
+    "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\data\\data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\data\\data.csproj",
+        "projectUniqueName": "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\data\\data.csproj",
         "projectName": "data",
-        "projectPath": "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\data\\data.csproj",
-        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jean\\Documents\\GitHub\\DatabaseMigrations\\src\\data\\obj\\",
+        "projectPath": "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\data\\data.csproj",
+        "packagesPath": "C:\\Users\\Iulia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Iulia\\Desktop\\DatabaseMigrations\\src\\data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Iulia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -611,7 +611,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Users\\Iulia\\.dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

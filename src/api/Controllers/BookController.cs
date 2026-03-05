@@ -11,8 +11,7 @@ public class BookController(BookService bookService) : ControllerBase
     [Route("getBooksAuthors")]
     public async Task<IActionResult> GetBooksAuthors()
     {
-        var dtos = await bookService.GetBooks();
+        var dtos = await bookService.GetAvailableBooks();
         return Ok(dtos);
     }
-    
 }
