@@ -1,15 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DefaultNamespace;
+using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers;
 [ApiController]
-[Route("Book")]
+[Route("Books")]
 
-public class BookController : ControllerBase
+public class BookController(BookService bookService) : ControllerBase
 {
     [HttpGet]
-    public async Task<IActionResult> GetBook()
+    [Route("getBooksAuthors")]
+    public async Task<IActionResult> GetBooksAuthors()
     {
-        return Ok();
+        var dtos = await bookService.GetAvailableBooks();
+        return Ok(dtos);
     }
-    
 }
